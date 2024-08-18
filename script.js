@@ -36,7 +36,7 @@ function cleanGrid(){
 function getResolution (){
     btn = document.querySelector('.resolution');
     btn.addEventListener('click', (event) => {
-        resolution = prompt('What resolution do you want');
+        resolution = prompt('How many square per side?');
         resolution = Number(resolution);
         if (resolution > 0){
             if (resolution >= 100) {

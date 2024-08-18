@@ -1,0 +1,16 @@
+.container {
+    background-color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+    border: solid 1px black;
+}
+
+.pixel {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    border: solid 1px black;
+    flex: 1 1 24%;
+}

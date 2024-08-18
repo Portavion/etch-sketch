@@ -11,11 +11,22 @@ function createGrid (resolution)  {
     }
 }
 
+function randomColor(){
+    let randomRGB = '';
+    let red = Math.random()*255;
+    let green = Math.random()*255;
+    let blue = Math.random()*255;
+
+    randomRGB = 'rgb(' + red + ',' + green + ',' + blue + ')'
+    return randomRGB;
+}
+
 function changeColor(target){
     let id = target.id;
+    let backgroundColor = randomColor();
     overedSquare = document.getElementById(id);
     if (overedSquare != null) {
-        overedSquare.style.backgroundColor = 'black';
+        overedSquare.style.backgroundColor = backgroundColor;
     }
 }
 

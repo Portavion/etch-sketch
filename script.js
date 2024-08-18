@@ -1,7 +1,7 @@
 function createGrid (resolution)  {
     let container = document.querySelector('.container');
     let pixels = []
-    
+    cleanGrid();
     for (let i = 0; i< resolution; i++) {
         pixels.push(document.createElement('div'));
         pixels[i].className = 'pixel';``
@@ -28,7 +28,30 @@ function createEventHover (){
     });
 }
 
+function cleanGrid(){
+    let container = document.querySelector('.container');
+    container.innerHTML = '';
+}
 
+function getResolution (){
+    btn = document.querySelector('.resolution');
+    btn.addEventListener('click', (event) => {
+        resolution = prompt('What resolution do you want');
+        resolution = Number(resolution);
+        if (resolution > 0){
+            if (resolution >= 100) {
+                createGrid(100);
+            }
+            else {
+                createGrid(resolution);
+            }
+        }
+        else {
+            createGrid(16);
+        }
+    });
+}
 
-createGrid(49);
+getResolution();
+createGrid(16);
 createEventHover();
